@@ -11,4 +11,4 @@ description: Turn IDEA.md into a reviewed spec (PLAN, FEATURES, API contract, th
 5. Write API_CONTRACT.md: every endpoint, request shape, response shape, and error cases. Add a data model.
 6. Add a THREATS section to SECURITY.md for this app: what is valuable, who might attack it, how.
 7. Do not write any app code.
-8. Stop. Wait for my approval before proceeding to [/design](file:///c:/Users/ANKUSH/Documents/Codes/app-template-2/.agent/workflows/design.md) (for UI) or [/build](file:///c:/Users/ANKUSH/Documents/Codes/app-template-2/.agent/workflows/build.md).
+8. Stop. Wait for my approval before proceeding to [/design](design.md) (for UI) or [/build](build.md).
