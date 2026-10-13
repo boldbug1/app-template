@@ -1,0 +1,80 @@
+/* tokens.css*/
+
+:root {
+  --font-sans: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --font-led: "DotGothic16", "VT323", ui-monospace, monospace;
+
+  /* soft theme (default) */
+  --bg: #e4e7ee;
+  --surface: #f6f7fa;
+  --surface-raised: #ffffff;
+  --ink: #23262b;
+  --ink-muted: #6b7280;
+  --rim: #aeb5c4;
+  --hairline: #d3d8e2;
+
+  /* accent: lit pink-red, active or most important thing only */
+  --accent: #e5486a;
+  --accent-soft: #fbd3db;
+  --accent-glow: rgba(229, 72, 106, 0.35);
+
+  /* readout */
+  --led-bg: #1b1f10;
+  --led-text: #b7e04a;
+
+  /* loud section themes */
+  --sage-bg: #a9b7b4;
+  --ink-bg: #1e1e1e;
+  --ink-card: #333333;
+  --pink-bg: #d45cb4;
+  --on-dark: #f5f5f5;
+
+  /* radius */
+  --radius-sharp: 0;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* shadows */
+  --shadow-float: 0 18px 40px rgba(35, 38, 43, 0.18), 0 2px 6px rgba(35, 38, 43, 0.12);
+  --shadow-rest: 0 2px 6px rgba(35, 38, 43, 0.15);
+  --shadow-pressed: 0 1px 2px rgba(35, 38, 43, 0.2);
+  --highlight-top: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  --inset-field: inset 0 1px 3px rgba(35, 38, 43, 0.18);
+
+  /* spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 96px;
+  --space-9: 160px;
+
+  /* type scale */
+  --text-label: 12px;
+  --text-body: 17px;
+  --text-lead: 22px;
+  --text-title: clamp(48px, 9vw, 140px);
+  --leading-title: 0.92;
+  --tracking-title: -0.04em;
+  --tracking-label: 0.08em;
+
+  /* motion */
+  --time-fast: 150ms;
+  --time-base: 200ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* loud section themes: put data-theme on one section at a time */
+[data-theme="sage"] { --bg: var(--sage-bg); --ink: #2b2f2e; }
+[data-theme="ink"]  { --bg: var(--ink-bg); --surface: var(--ink-card); --ink: var(--on-dark); --ink-muted: #b5b5b5; }
+[data-theme="pink"] { --bg: var(--pink-bg); --ink: #3a1230; }
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --time-fast: 0ms; --time-base: 0ms; }
+}
